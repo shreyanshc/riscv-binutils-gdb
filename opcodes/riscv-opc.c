@@ -158,6 +158,7 @@ match_c_addi4spn (const struct riscv_opcode *op, insn_t insn)
 const struct riscv_opcode riscv_opcodes[] =
 {
 /* name,      isa,   operands, match, mask, match_func, pinfo.  */
+{"hiche",     "I",   "d,s,t", MATCH_HICHE, MASK_HICHE, match_opcode, 0},
 {"unimp",     "C",   "",  0, 0xffffU,  match_opcode, 0 },
 {"unimp",     "I",   "",  MATCH_CSRRW | (CSR_CYCLE << OP_SH_CSR), 0xffffffffU,  match_opcode, 0 }, /* csrw cycle, x0 */
 {"ebreak",    "C",   "",  MATCH_C_EBREAK, MASK_C_EBREAK, match_opcode, INSN_ALIAS },
